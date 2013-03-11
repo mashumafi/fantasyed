@@ -1,0 +1,24 @@
+{
+	"name": "fantasylearning",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"domains": [
+		"fantasylearning.com"
+	],
+	"dependencies": {
+		"express": "*",
+		"jade": "*",
+		"redis": "*",
+		"mongoose": "*",
+		"socket.io": "*",
+		"mongoose-validator": "*",
+		"async": "*"
+	},
+	"subdomain": "fantasylearning",
+	"engines": {
+		"node": "0.8.x"
+	}
+}

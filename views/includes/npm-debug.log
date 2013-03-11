@@ -1,0 +1,33 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'search',
+1 verbose cli   '/.*' ]
+2 info using npm@1.1.48
+3 info using node@v0.8.6
+4 verbose config file C:\Users\Matthew\.npmrc
+5 verbose config file C:\Program Files (x86)\nodejs\etc\npmrc
+6 verbose config file C:\Program Files (x86)\nodejs\node_modules\npm\npmrc
+7 verbose url raw /-/all/since?stale=update_after&startkey=1348476840000
+8 verbose url resolving [ 'https://registry.npmjs.org/',
+8 verbose url resolving   './-/all/since?stale=update_after&startkey=1348476840000' ]
+9 verbose url resolved https://registry.npmjs.org/-/all/since?stale=update_after&startkey=1348476840000
+10 info retry registry request attempt 1 at 19:20:47
+11 http GET https://registry.npmjs.org/-/all/since?stale=update_after&startkey=1348476840000
+12 http 200 https://registry.npmjs.org/-/all/since?stale=update_after&startkey=1348476840000
+13 error Error: write EPIPE
+13 error     at errnoException (net.js:768:11)
+13 error     at Object.afterWrite (net.js:592:19)
+14 error If you need help, you may report this log at:
+14 error     <http://github.com/isaacs/npm/issues>
+14 error or email it to:
+14 error     <npm-@googlegroups.com>
+15 error System Windows_NT 6.1.7601
+16 error command "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "search" "/.*"
+17 error cwd F:\Sites\lSports\views\includes
+18 error node -v v0.8.6
+19 error npm -v 1.1.48
+20 error syscall write
+21 error code EPIPE
+22 error errno EPIPE
+23 verbose exit [ 1, true ]

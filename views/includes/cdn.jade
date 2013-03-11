@@ -1,0 +1,3 @@
+mixin cdn(lib, remote, local)
+	script(src=remote)
+	script window.#{lib} || document.write('<script src=\"#{local}\"><\/script>')

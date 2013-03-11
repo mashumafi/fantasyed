@@ -1,0 +1,26 @@
+mixin text(name, value, title)
+	mixin input("text", name, value, title)
+
+mixin password(name, value, title)
+	mixin input("password", name, value, title)
+
+mixin submit(name, value)
+	button.ui-state-default.ui-corner-all(name=name, data-bind="click: #{name}, disable: isValid")=value
+
+mixin label(name, title)
+	label(for=name)=title
+
+mixin error(name)
+	span.error(data-bind="text: #{name}_error()")
+
+mixin checkbox(name, value, title)
+	.field
+		mixin label(name, title) 
+		input(id=name, type="checkbox", name=name, data-bind="checked: #{name}")
+		mixin error(name)
+
+mixin input(type, name, value, title)
+	.field
+		mixin label(name, title) 
+		input(id=name, type=type, name=name, value=value, data-bind="value: #{name}")
+		mixin error(name)

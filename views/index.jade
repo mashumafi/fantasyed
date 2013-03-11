@@ -1,0 +1,17 @@
+extends blank
+
+include includes/forms
+
+block content
+	.center
+		h1 FantEdu
+		form#login(action="login", method="POST")
+			.ui-widget.ui-corner-all
+				.ui-widget-header.ui-corner-top
+					legend Login
+				.ui-widget-content.ui-corner-bottom
+					mixin text("username", "", "Username")
+					mixin password("password", "", "Password")
+					mixin checkbox("remember", "", "Remember Me")
+					mixin submit("login", "Login")
+			a(href="#") Forgot password?

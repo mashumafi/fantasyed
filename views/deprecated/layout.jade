@@ -1,0 +1,40 @@
+include includes/forms
+include includes/tags
+
+doctype 5
+html.no-js
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		title= title
+		meta(name="description", content="")
+		meta(name="viewport", content="width=device-width")
+
+		link(rel="stylesheet", href="/css/normalize.min.css")
+		link(rel="stylesheet", href="/css/main.css")
+
+		script(src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js")
+	body
+		.header-container
+			header.wrapper.clearfix
+				h1.title Fantasy Learning
+				nav
+					ul
+						li
+							a(href="#") Home
+
+		.main-container
+			.main.wrapper.clearfix
+				block content
+
+			// #main
+		// #main-container
+
+		.footer-container
+			footer.wrapper
+				h3 &copy; 2013 mashumafi
+
+		mixin cdn("jQuery", "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", "/js/vendor/jquery-1.9.1.min.js")
+		mixin cdn("ko" "//ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js", "/js/vendor/knockout-2.2.1.min.js")
+
+		script(src="/js/main.js")
