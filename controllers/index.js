@@ -1,5 +1,6 @@
+var db = require('../database');
+
 exports.index = function(req, res) {
-	console.log(this);
 	res.render('index', { title: 'Fantasy Learning' });
 };
 
