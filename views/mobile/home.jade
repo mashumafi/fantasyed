@@ -1,0 +1,41 @@
+#home(data-role="page")
+	div(data-id="header", data-role="header", data-position="fixed")
+		h1 Fantasy Ed
+		a.ui-btn-right(href="#feed-chat", data-icon="bars") Mail
+	div(data-role="header")
+		div
+			a.no-margin(data-role="button", href="#scoreboard", data-corners="false")
+				.ui-grid-b
+					.ui-block-a
+						.ui-bar
+							div 
+								img(src="img/team/wild_life/koala.png", width=32, height=32)
+							div 71
+					.ui-block-b
+						.ui-bar(data-bind="text: team.name")
+						.ui-bar Animal league
+					.ui-block-c
+							div
+								img(src="img/team/wild_life/eagle.png", width=32, height=32)
+							div 83
+		div
+			a.no-margin(data-role="button", href="#progress", data-theme="b", data-corners="false")
+				span(data-bind="text: name.first")
+				span  
+				span(data-bind="text: name.last")
+				span  (
+				span(data-bind="text: points")
+				span )
+	div(data-role="content")
+		ul(data-role="listview", data-inset="true", data-count-theme="a")
+			li
+				a(href="#profile") Profile
+			li
+				a(href="#team") Team
+			li
+				a(href="#feed") Feed
+					span.ui-li-count 5
+			li
+				a(href="#leaderboard") Leaderboards
+	.ui-bar(data-role="footer", data-position="fixed")
+		span.ui-title

@@ -1,0 +1,46 @@
+#feed-chat(data-role="page")
+	div(data-id="header", data-role="header", data-position="fixed")
+		a(href="#home", data-icon="home") Home
+		h1 Fantasy Ed
+		a(href="#feed-chat", data-icon="bars") Mail
+		div(data-role="navbar")
+			ul
+				li
+					a(href="#feed") Team
+				li
+					a(href="#feed-friends") Friends
+				li
+					a.ui-btn-active.ui-state-persist(href="#feed-chat") Chat
+	div(data-role="content")
+		ul(data-role="listview", data-bind="foreach: friends, jqmRefreshList: friends, jqmRefreshList: friends().unread")
+			li(data-role="list-divider") Coach
+			li(data-role="list-divider") Team
+			li
+				a(href="#chat", data-bind="click: showChat")
+					img(src="img/avatars/gray_on_light/avatar_male_gray_on_light_200x200.png")
+					h2
+						span(data-bind="text: name.first")
+						span  
+						span(data-bind="text: name.last")
+					p Hello world
+					span.ui-li-count(data-bind="text: unread, visible: unread() > 0")
+			li(data-role="list-divider") Friends
+	div(data-id="footer", data-role="footer", data-position="fixed")
+		div(data-role="navbar")
+			ul
+				li
+					a(href="#scoreboard", data-icon="grid") Scoreboard
+				li
+					a(href="#team", data-icon="grid") Team
+				li
+					a.ui-btn-active.ui-state-persist(href="#feed", data-icon="grid") Feed
+				li
+					a(href="#leaderboard", data-icon="grid") Leaderboard
+	div#chat(data-role="panel", data-bind="with: friend", data-position="right", data-position-fixed="true", data-display="overlay")
+		input(data-bind="value: message")
+		div(data-role="button", data-bind="click: send") Send
+		ul(data-role="listview", data-bind="foreach: chat, jqmRefreshList: chat", data-inset="true")
+			li
+				img(src="img/avatars/gray_on_light/avatar_male_gray_on_light_200x200.png")
+				h2(data-bind="text: content", style="white-space: normal;")
+				p(data-bind="text: time")

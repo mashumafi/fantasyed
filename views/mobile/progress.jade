@@ -1,0 +1,19 @@
+#progress(data-role="page")
+	div(data-id="header", data-role="header", data-position="fixed")
+		a(href="#home", data-icon="home") Home
+		h1 Fantasy Ed
+		a(href="#feed-chat", data-icon="bars") Mail
+	div(data-role="content")
+		form
+			label(for="homework-progress") Homework:
+			input(type="range", name="homework-progress", id="homework-progress", min=0, max=100, value=50, data-highlight="true", data-theme="a")
+			label(for="attendance-progress") Attendance:
+			input(type="range", name="attendance-progress", id="attendance-progress", min=0, max=100, value=50, data-highlight="true", data-theme="a")
+			label(for="attendance-test") Quiz/Test:
+			input(type="range", name="test-progress", id="attendance-progress", min=0, max=100, value=50, data-highlight="true", data-theme="a")
+			label(for="participation-progress") Participation:
+			input(type="range", name="participation-progress", id="homework-progress", min=0, max=100, value=50, data-highlight="true", data-theme="a")
+			label(for="homework-extracurriculars") Extracurriculars:
+			input(type="range", name="extracurriculars-progress", id="homework-progress", min=0, max=100, value=50, data-highlight="true", data-theme="a", disabled="disabled")
+	.ui-bar(data-role="footer", data-position="fixed")
+		span.ui-title

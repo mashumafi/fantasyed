@@ -1,0 +1,17 @@
+doctype 5
+html
+	head
+		title Fantasy Ed Login
+	body
+		table
+			thead
+				th Name
+				th Roles
+			each user in users
+				tr
+					td
+						a(href="/?id=#{user._id}") #{user.name.first} #{user.name.last}
+					td
+						ul
+							each role in user.role
+								li #{role}

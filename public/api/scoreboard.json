@@ -1,0 +1,55 @@
+{ "team" : [ { "behavior" : [ { "name" : "Attendance",
+              "score" : { "away" : 20,
+                  "home" : 10
+                }
+            },
+            { "name" : "Homework",
+              "score" : { "away" : 10,
+                  "home" : 10
+                }
+            },
+            { "name" : "Total",
+              "score" : { "away" : 30,
+                  "home" : 20
+                }
+            }
+          ],
+        "name" : "Eagles"
+      },
+      { "behavior" : [ { "name" : "Attendance",
+              "score" : { "away" : 40,
+                  "home" : 10
+                }
+            },
+            { "name" : "Homework",
+              "score" : { "away" : 10,
+                  "home" : 10
+                }
+            },
+            { "name" : "Total",
+              "score" : { "away" : 50,
+                  "home" : 20
+                }
+            }
+          ],
+        "name" : "Pandas"
+      },
+      { "behavior" : [ { "name" : "Attendance",
+              "score" : { "away" : 10,
+                  "home" : 30
+                }
+            },
+            { "name" : "Homework",
+              "score" : { "away" : 10,
+                  "home" : 10
+                }
+            },
+            { "name" : "Total",
+              "score" : { "away" : 20,
+                  "home" : 40
+                }
+            }
+          ],
+        "name" : "Giraffe"
+      }
+    ] }

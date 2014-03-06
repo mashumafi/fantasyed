@@ -1,0 +1,30 @@
+#team(data-role="page")
+	div(data-id="header", data-role="header", data-position="fixed")
+		a(href="#home", data-icon="home") Home
+		h1 Fantasy Ed
+		a(href="#feed-chat", data-icon="bars") Mail
+	div(data-role="content")
+		.ui-bar(data-bind="text: name")
+		ul(data-role="listview", data-bind="foreach: members, jqmRefreshList: members", data-split-icon="grid", data-inset="true")
+			li
+				a(href="#profile")
+					img(src="img/avatars/gray_on_light/avatar_male_gray_on_light_200x200.png")
+					h2
+						span(data-bind="text: name.first")
+						span  
+						span(data-bind="text: name.last")
+					p
+						span() 0
+						span  points
+				a(href="#") Calendar
+	div(data-id="footer", data-role="footer", data-position="fixed")
+		div(data-role="navbar")
+			ul
+				li
+					a(href="#scoreboard", data-icon="grid") Scoreboard
+				li
+					a.ui-btn-active.ui-state-persist(href="#team", data-icon="grid") Team
+				li
+					a(href="#feed", data-icon="grid") Feed
+				li
+					a(href="#leaderboard", data-icon="grid") Leaderboard

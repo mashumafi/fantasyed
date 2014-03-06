@@ -75,6 +75,8 @@ $(function() {
 	});
 	
 	$(".column").disableSelection();
+	
+    $(".tabs").tabs();
 });
 
 generateViewModel({

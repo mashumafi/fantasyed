@@ -1,0 +1,40 @@
+#leaderboard(data-role="page")
+	div(data-id="header", data-role="header", data-position="fixed")
+		a(href="#home", data-icon="home") Home
+		h1 Fantasy Ed
+		a(href="#feed-chat", data-icon="bars") Mail
+		div(data-role="navbar")
+			ul
+				li
+					a.ui-btn-active.ui-state-persist(href="#leaderboard") Individual
+				li
+					a(href="#leaderboard-team") Team
+	div(data-role="content", data-bind="foreach: categories")
+		div.category(data-role="collapsible", data-collapsed="false", data-inset="false")
+			h4(data-bind="text: name")
+			p
+				table.ui-responsive.table-stroke(data-role="table", data-mode="reflow")
+					thead
+						tr
+							th(data-priority=1) Name
+							th(data-priority=2) Team
+							th(data-priority=3) Score
+					tbody(data-bind="foreach: players")
+						tr
+							th
+								span(data-bind="text: name.first")
+								span  
+								span(data-bind="text: name.last")
+							td(data-bind="text: team.name")
+							td(data-bind="text: points")
+	div(data-id="footer", data-role="footer", data-position="fixed")
+		div(data-role="navbar")
+			ul
+				li
+					a(href="#scoreboard", data-icon="grid") Scoreboard
+				li
+					a(href="#team", data-icon="grid") Team
+				li
+					a(href="#feed", data-icon="grid") Feed
+				li
+					a.ui-btn-active.ui-state-persist(href="#leaderboard", data-icon="grid") Leaderboard

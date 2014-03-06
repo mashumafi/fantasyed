@@ -20,43 +20,29 @@ var UserSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'School'
 	},
-	classes: [new mongoose.Schema({
-		_id: {
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'Class'
-		},
-		role: {
-			type: String,
-			enum: ["Teacher", "Student"]
-		}
-	})],
 	parents: [{
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User'
 	}],
-	report: [new mongoose.Schema({
-		season: {
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'Season'
-		},
-		daily: [new mongoose.Schema({
-			day: Date,
-			points: [new mongoose.Schema({
-				behavior: {
-					type: mongoose.Schema.Types.ObjectId,
-					ref: 'Season'
-				},
-				score: Number
-			})]
-		})],
-	})],
+	report: [{
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Report'
+	}],
 	role: {
 		type: [String],
-		validate: [validate({message: 'Not a valid role'}, 'enums', ['Student', 'Teacher', 'Parent', 'Mentor', 'Volunteer', 'Admin', 'Principle'])]
+		validate: [validate({message: 'Not a valid role'}, 'enums', ['Student', 'Teacher', 'Parent', 'Mentor', 'Volunteer', 'Admin'])]
 	}
 });
 UserSchema.virtual('name.full').get(function() {
 	return this.name.first + ' ' + this.name.last;
 });
-//mongoose.Schema.Types.ObjectId
+UserSchema.methods.getTeam = function(cb) {
+	var self = this, now = new Date();
+	self.model('Season').findOne({start: { $lt: now}, end: {$gt: now}}, function(err, season) {
+		self.model('Team').findOne({
+			season: season._id,
+			members: self._id
+		}).populate('members').exec(cb);
+	});
+};
 var User = module.exports = mongoose.model('User', UserSchema);

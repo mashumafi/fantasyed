@@ -1,0 +1,39 @@
+#scoreboard(data-role="page")
+	div(data-id="header", data-role="header", data-position="fixed")
+		a(href="#home", data-icon="home") Home
+		h1 Fantasy Ed
+		a(href="#feed-chat", data-icon="bars") Mail
+		div(data-role="navbar")
+			ul
+				li
+					a.ui-btn-active.ui-state-persist(href="#scoreboard") Team
+				li
+					a(href="#scoreboard-league") League
+				li
+					a(href="#scoreboard-standing") Standings
+	div(data-role="content", data-bind="foreach: team")
+		div.category(data-role="collapsible", data-collapsed="false")
+			h4(data-bind="text: name")
+			p
+				table.ui-responsive.table-stroke(data-role="table", data-mode="reflow")
+					thead
+						tr
+							th(data-priority=1) Behavior
+							th(data-priority=2) Koala
+							th(data-priority=3, data-bind="text: name")
+					tbody(data-bind="foreach: behavior")
+						tr
+							th(data-bind="text: name")
+							td(data-bind="text: score.home")
+							td(data-bind="text: score.away")
+	div(data-id="footer", data-role="footer", data-position="fixed")
+		div(data-role="navbar")
+			ul
+				li
+					a.ui-btn-active.ui-state-persist(href="#scoreboard", data-icon="grid") Scoreboard
+				li
+					a(href="#team", data-icon="grid") Team
+				li
+					a(href="#feed", data-icon="grid") Feed
+				li
+					a(href="#leaderboard", data-icon="grid") Leaderboard

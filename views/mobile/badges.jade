@@ -1,0 +1,19 @@
+#badges(data-role="page")
+	div(data-id="header", data-role="header", data-position="fixed")
+		a(href="#home", data-icon="home") Home
+		h1 Fantasy Ed
+		a(href="#feed-chat", data-icon="bars") Mail
+		div(data-role="navbar")
+			ul
+				li
+					a.ui-btn-active.ui-state-persist(href="#badges") Individual
+				li
+					a(href="#badges-team") Team
+	div(data-role="content")
+		div(data-role="listview", data-bind="foreach: badges")
+			li
+				img(src="img/badges/badge0.png")
+				h2(data-bind="text: name")
+				p(data-bind="text: description")
+	div(data-role="footer", data-id="footer", data-position="fixed")
+		span.ui-title

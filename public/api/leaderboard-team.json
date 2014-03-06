@@ -1,0 +1,37 @@
+{ "categories" : [ { "name" : "Homework",
+        "teams" : [ { "name" : "Koala",
+              "points" : 10
+            },
+            { "name" : "Panda",
+              "points" : 20
+            }
+          ]
+      },
+      { "name" : "Attendance",
+        "teams" : [ { "name" : "Koala",
+              "points" : 10
+            },
+            { "name" : "Panda",
+              "points" : 20
+            }
+          ]
+      },
+      { "name" : "Extracurricular",
+        "teams" : [ { "name" : "Koala",
+              "points" : 10
+            },
+            { "name" : "Panda",
+              "points" : 20
+            }
+          ]
+      },
+      { "name" : "Quiz/Test",
+        "teams" : [ { "name" : "Koala",
+              "points" : 10
+            },
+            { "name" : "Panda",
+              "points" : 20
+            }
+          ]
+      }
+    ] }

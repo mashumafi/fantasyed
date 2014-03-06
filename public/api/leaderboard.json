@@ -1,0 +1,61 @@
+{ "categories" : [ { "name" : "Homework",
+        "players" : [ { "name" : { "first" : "Matthew",
+                  "last" : "Murphy"
+                },
+              "points" : 10,
+              "team" : { "name" : "Koala" }
+            },
+            { "name" : { "first" : "Logan",
+                  "last" : "Murphy"
+                },
+              "points" : 20,
+              "team" : { "name" : "Koala" }
+            }
+          ]
+      },
+      { "name" : "Attendance",
+        "players" : [ { "name" : { "first" : "Matthew",
+                  "last" : "Murphy"
+                },
+              "points" : 10,
+              "team" : { "name" : "Koala" }
+            },
+            { "name" : { "first" : "Logan",
+                  "last" : "Murphy"
+                },
+              "points" : 20,
+              "team" : { "name" : "Koala" }
+            }
+          ]
+      },
+      { "name" : "Extracurricular",
+        "players" : [ { "name" : { "first" : "Matthew",
+                  "last" : "Murphy"
+                },
+              "points" : 10,
+              "team" : { "name" : "Koala" }
+            },
+            { "name" : { "first" : "Logan",
+                  "last" : "Murphy"
+                },
+              "points" : 20,
+              "team" : { "name" : "Koala" }
+            }
+          ]
+      },
+      { "name" : "Quiz/Test",
+        "players" : [ { "name" : { "first" : "Matthew",
+                  "last" : "Murphy"
+                },
+              "points" : 10,
+              "team" : { "name" : "Koala" }
+            },
+            { "name" : { "first" : "Logan",
+                  "last" : "Murphy"
+                },
+              "points" : 20,
+              "team" : { "name" : "Koala" }
+            }
+          ]
+      }
+    ] }

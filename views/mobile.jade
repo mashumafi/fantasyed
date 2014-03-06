@@ -1,0 +1,28 @@
+doctype 5
+html
+	head
+		title Fantasy Ed
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		script(src="http://code.jquery.com/jquery-1.9.1.min.js", type="text/javascript")
+		script(src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js", type="text/javascript")
+		script(src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js", type="text/javascript")
+		script(src="/js/vendor/knockout.mapping.js", type="text/javascript")
+		script(src="/socket.io/socket.io.js")
+		script(src="js/mobile.js", type="text/javascript")
+		link(href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css", rel="stylesheet", type="text/css")
+		link(href="css/mobile.css", rel="stylesheet", type="text/css")
+	body
+		include mobile/home
+		include mobile/progress
+		include mobile/profile
+		include mobile/team
+		include mobile/feed
+		include mobile/feed-friends
+		include mobile/feed-chat
+		include mobile/leaderboard
+		include mobile/leaderboard-team
+		include mobile/badges
+		include mobile/badges-team
+		include mobile/scoreboard
+		include mobile/scoreboard-league
+		include mobile/scoreboard-standing

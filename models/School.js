@@ -5,7 +5,7 @@ var SchoolSchema = new mongoose.Schema({
 	name: {
 		type: String,
 		required: true,
-		validate: [validate('len', 3, 50), validate('isAlphanumeric')]
+		validate: [validate('len', 3, 50)]
 	}
 });
 var School = module.exports = mongoose.model('School', SchoolSchema);
